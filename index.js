@@ -23,11 +23,12 @@ function verifier(chiffre) {
 
     }else if(chiffre > nombreAleatoire){
         instruction.classList = 'plus';
-        instruction.textContent = '#' + tentatives + ' || ' +  ' C\'est moins de ' + chiffre;
+        instruction.textContent = '#' + tentatives + ' || ' +  ' C\'est moins de ' + chiffre ;
 
     }else{
         instruction.classList = 'fini';
-        instruction.textContent = 'Bravo vous avez trouvé le juste prix qui est :' + nombreAleatoire + ' en ' + tentatives + ' tentatives';
+        instruction.textContent = 'Bravo vous avez trouvé le juste prix qui est ' + nombreAleatoire + ' en ' + tentatives + ' tentatives';
+        input.disabled = true;
     }
     document.querySelector('#instructions').prepend(instruction);
 

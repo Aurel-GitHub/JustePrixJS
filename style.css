@@ -14,7 +14,7 @@ html, body {
   }
   
   .instruction {
-    padding: 15px;
+    padding: 25px;
     margin: 10px 0;
   }
   
@@ -32,9 +32,11 @@ html, body {
     padding: 0.5rem;
     font-weight: bold;
 
-
   }
   
   .fini {
     background-color : #0c9463;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
   }
