@@ -19,19 +19,18 @@ function verifier(chiffre) {
      
     if(chiffre < nombreAleatoire){
         instruction.className = 'moins';
-        instruction.textContent = 'C\'est plus de ' + chiffre;
-        formulaire.append(instruction);
+        instruction.textContent = '#' + tentatives + ' || ' + 'C\'est plus de ' + chiffre;
 
     }else if(chiffre > nombreAleatoire){
         instruction.classList = 'plus';
-        instruction.textContent = 'C\'est moins de ' + chiffre;
-        formulaire.append(instruction);
+        instruction.textContent = '#' + tentatives + ' || ' +  ' C\'est moins de ' + chiffre;
 
     }else{
         instruction.classList = 'fini';
         instruction.textContent = 'Bravo vous avez trouvé le juste prix qui est :' + nombreAleatoire + ' en ' + tentatives + ' tentatives';
-        formulaire.append(instruction);
     }
+    document.querySelector('#instructions').prepend(instruction);
+
 }
 
 // Vérifier que l'utilisateur donne bien un nombre
